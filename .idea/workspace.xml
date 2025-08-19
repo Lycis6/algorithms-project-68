@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa49570b-2398-4c27-8bdf-664c73aab593" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/router/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/resources/sun_checks_hexlet_edition.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/router/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/router/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/router/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/router/Router.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/java/org/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/org/example/AppTest.java" afterDir="false" />
     </list>
@@ -78,8 +73,15 @@
     "Gradle.algorithms-project-68:app [:app:hexlet.code.router.App.main()].executor": "Run",
     "Gradle.algorithms-project-68:app [:app:hexlet.code.router.Router.main()].executor": "Run",
     "JUnit.AppTest.executor": "Run",
+    "JUnit.AppTest.routerFindDynamicPathTest1.executor": "Run",
+    "JUnit.AppTest.routerFindDynamicPathTest2.executor": "Run",
     "JUnit.AppTest.routerFindPathTest.executor": "Run",
     "JUnit.AppTest.routerFindPathTest2.executor": "Run",
+    "JUnit.AppTest.routerNotFindDynamicPathTest.executor": "Run",
+    "JUnit.AppTest.routerNotFindDynamicPathTest2.executor": "Run",
+    "JUnit.AppTest.routerNotFindDynamicPathTest3.executor": "Run",
+    "JUnit.AppTest.routerNotFindDynamicPathTest4.executor": "Run",
+    "JUnit.AppTest.routerNotFindDynamicPathTest5.executor": "Run",
     "JUnit.AppTest.routerNotFindPathTest.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
@@ -109,19 +111,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.AppTest">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="hexlet.code.router.App" />
-      <module name="app.app.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="hexlet.code.router.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="app.app.test" />
       <extension name="coverage">
@@ -137,7 +126,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.routerFindPathTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppTest.routerNotFindDynamicPathTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="app.app.test" />
       <extension name="coverage">
         <pattern>
@@ -147,13 +136,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.AppTest" />
-      <option name="METHOD_NAME" value="routerFindPathTest" />
+      <option name="METHOD_NAME" value="routerNotFindDynamicPathTest2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.routerFindPathTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppTest.routerNotFindDynamicPathTest3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="app.app.test" />
       <extension name="coverage">
         <pattern>
@@ -163,13 +152,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.AppTest" />
-      <option name="METHOD_NAME" value="routerFindPathTest2" />
+      <option name="METHOD_NAME" value="routerNotFindDynamicPathTest3" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.routerNotFindPathTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppTest.routerNotFindDynamicPathTest4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="app.app.test" />
       <extension name="coverage">
         <pattern>
@@ -179,26 +168,42 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.AppTest" />
-      <option name="METHOD_NAME" value="routerNotFindPathTest" />
+      <option name="METHOD_NAME" value="routerNotFindDynamicPathTest4" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.routerNotFindDynamicPathTest5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="app.app.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.AppTest" />
+      <option name="METHOD_NAME" value="routerNotFindDynamicPathTest5" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.App" />
       <item itemvalue="JUnit.AppTest" />
-      <item itemvalue="JUnit.AppTest.routerFindPathTest" />
-      <item itemvalue="JUnit.AppTest.routerFindPathTest2" />
-      <item itemvalue="JUnit.AppTest.routerNotFindPathTest" />
+      <item itemvalue="JUnit.AppTest.routerNotFindDynamicPathTest2" />
+      <item itemvalue="JUnit.AppTest.routerNotFindDynamicPathTest3" />
+      <item itemvalue="JUnit.AppTest.routerNotFindDynamicPathTest4" />
+      <item itemvalue="JUnit.AppTest.routerNotFindDynamicPathTest5" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.AppTest" />
-        <item itemvalue="JUnit.AppTest.routerNotFindPathTest" />
-        <item itemvalue="JUnit.AppTest.routerFindPathTest2" />
-        <item itemvalue="JUnit.AppTest.routerFindPathTest" />
-        <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.AppTest.routerNotFindDynamicPathTest5" />
+        <item itemvalue="JUnit.AppTest.routerNotFindDynamicPathTest4" />
+        <item itemvalue="JUnit.AppTest.routerNotFindDynamicPathTest3" />
+        <item itemvalue="JUnit.AppTest.routerNotFindDynamicPathTest2" />
       </list>
     </recent_temporary>
   </component>
@@ -227,7 +232,7 @@
       <workItem from="1755595757793" duration="391000" />
       <workItem from="1755596154238" duration="2141000" />
       <workItem from="1755598332395" duration="73000" />
-      <workItem from="1755598410385" duration="2013000" />
+      <workItem from="1755598410385" duration="6617000" />
     </task>
     <servers />
   </component>
