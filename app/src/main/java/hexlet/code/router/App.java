@@ -1,5 +1,10 @@
 package hexlet.code.router;
 
+import hexlet.code.router.routesBasedOnPrefixTree.Edge;
+import hexlet.code.router.routesBasedOnPrefixTree.EdgeType;
+import hexlet.code.router.routesBasedOnPrefixTree.PrefixTree;
+import hexlet.code.router.routesBasedOnPrefixTree.PrefixTreeNode;
+
 import java.util.List;
 import java.util.Map;
 
@@ -18,11 +23,14 @@ public class App {
                 Map.of("path", "/courses/basics",
                         "handler", Map.of("body", "basics"))
         );
-        try {
-            Map<String, String> handler = Router.serve(routes, "sdv");
-            System.out.println(handler.get("body"));
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+
+        PrefixTree routesByTree = new PrefixTree();
+        PrefixTreeNode node1 = new PrefixTreeNode(true, Map.of("body", "courses"));
+        PrefixTreeNode node2 = new PrefixTreeNode(true, Map.of("body", "basics"));
+        routesByTree.getRoot().addEdge(new Edge(routesByTree.getRoot(), node1, "course",
+                EdgeType.STATIC, null));
+        node1.addEdge(new Edge(node1, node2, "basics", EdgeType.STATIC, null));
+
+
     }
 }
