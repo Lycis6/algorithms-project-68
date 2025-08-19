@@ -25,12 +25,10 @@ public class App {
         );
 
         PrefixTree routesByTree = new PrefixTree();
-        PrefixTreeNode node1 = new PrefixTreeNode(true, Map.of("body", "courses"));
-        PrefixTreeNode node2 = new PrefixTreeNode(true, Map.of("body", "basics"));
+        PrefixTreeNode node1 = new PrefixTreeNode(true, Map.of("body", "courses"), false);
+        PrefixTreeNode node2 = new PrefixTreeNode(true, Map.of("body", "basics"), false);
         routesByTree.getRoot().addEdge(new Edge(routesByTree.getRoot(), node1, "course",
                 EdgeType.STATIC, null));
         node1.addEdge(new Edge(node1, node2, "basics", EdgeType.STATIC, null));
-
-
     }
 }

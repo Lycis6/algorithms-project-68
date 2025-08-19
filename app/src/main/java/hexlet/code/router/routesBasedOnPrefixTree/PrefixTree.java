@@ -8,7 +8,7 @@ public class PrefixTree {
         this.root = root;
     }
     public PrefixTree() {
-        this.root = new PrefixTreeNode(false, new ArrayList<>(), null);
+        this.root = new PrefixTreeNode(false, new ArrayList<>(), null, false);
     }
 
     public PrefixTreeNode getRoot() {

@@ -6,11 +6,13 @@ import java.util.Map;
 
 public class PrefixTreeNode {
     private final boolean isTerminal;
+    private final boolean isLeaf;
     private List<Edge> edges;
     private Map<String, String> handler; // не null, если узел - терминальный
-    public PrefixTreeNode(boolean isTerminal, List<Edge> edges, Map<String, String> handler) {
+    public PrefixTreeNode(boolean isTerminal, List<Edge> edges, Map<String, String> handler, boolean isLeaf) {
         this.isTerminal = isTerminal;
         this.edges = edges;
+        this.isLeaf = isLeaf;
         if (isTerminal) {
             this.handler = handler;
         } else {
@@ -18,14 +20,28 @@ public class PrefixTreeNode {
         }
     }
 
-    public PrefixTreeNode(boolean isTerminal, Map<String, String> handler) {
+    public PrefixTreeNode(boolean isTerminal, Map<String, String> handler, boolean isLeaf) {
         this.isTerminal = isTerminal;
         this.edges = new ArrayList<>();
+        this.isLeaf = isLeaf;
         if (isTerminal) {
             this.handler = handler;
         } else {
             this.handler = null;
         }
+    }
+
+    public Edge edgesMatchesSegment(String segment) {
+        for (Edge edge : edges) {
+            if (edge.getSegment().equals(segment)) {
+                return edge;
+            } else {
+                if (edge.getType().equals(EdgeType.PLACEHOLDER) && segment.matches(edge.getConstraint())) {
+                    return edge;
+                }
+            }
+        }
+        return null;
     }
 
     public boolean isTerminal() {
@@ -50,5 +66,9 @@ public class PrefixTreeNode {
 
     public void addEdge(Edge edge) {
         edges.add(edge);
+    }
+
+    public boolean isLeaf() {
+        return isLeaf;
     }
 }

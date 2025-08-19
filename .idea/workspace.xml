@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa49570b-2398-4c27-8bdf-664c73aab593" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/router/dataStructure/Edge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/router/dataStructure/EdgeType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/router/dataStructure/PrefixTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/router/dataStructure/PrefixTreeNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/org/example/RoutesStoredInTreeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/router/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/router/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/router/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/router/Router.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/router/routesBasedOnPrefixTree/PrefixTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/router/routesBasedOnPrefixTree/PrefixTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/router/routesBasedOnPrefixTree/PrefixTreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/router/routesBasedOnPrefixTree/PrefixTreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/org/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/org/example/RoutesStoredInListTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +47,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -85,10 +88,17 @@
     "JUnit.AppTest.routerNotFindDynamicPathTest4.executor": "Run",
     "JUnit.AppTest.routerNotFindDynamicPathTest5.executor": "Run",
     "JUnit.AppTest.routerNotFindPathTest.executor": "Run",
+    "JUnit.RoutesStoredInListTest.executor": "Run",
+    "JUnit.RoutesStoredInTreeTest.executor": "Run",
+    "JUnit.RoutesStoredInTreeTest.routerFindDynamicPathTest2.executor": "Run",
+    "JUnit.RoutesStoredInTreeTest.routerFindDynamicPathTest3.executor": "Run",
+    "JUnit.RoutesStoredInTreeTest.routerFindStaticPathTest1.executor": "Run",
+    "JUnit.Test1.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/artembykovskih/IdeaProjects/algorithms-project-68/app/src/test/resources",
@@ -112,8 +122,8 @@
       <recent name="$PROJECT_DIR$/app/src/main/java/hexlet/code/router" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AppTest">
-    <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.RoutesStoredInTreeTest">
+    <configuration name="RoutesStoredInListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="app.app.test" />
       <extension name="coverage">
         <pattern>
@@ -122,13 +132,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.AppTest" />
+      <option name="MAIN_CLASS_NAME" value="org.example.RoutesStoredInListTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.routerNotFindDynamicPathTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RoutesStoredInTreeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="app.app.test" />
       <extension name="coverage">
         <pattern>
@@ -137,14 +147,45 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.AppTest" />
+      <option name="MAIN_CLASS_NAME" value="org.example.RoutesStoredInTreeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RoutesStoredInTreeTest.routerNotFindDynamicPathTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="app.app.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.RoutesStoredInTreeTest" />
+      <option name="METHOD_NAME" value="routerNotFindDynamicPathTest1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RoutesStoredInTreeTest.routerNotFindDynamicPathTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="app.app.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.RoutesStoredInTreeTest" />
       <option name="METHOD_NAME" value="routerNotFindDynamicPathTest2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.routerNotFindDynamicPathTest3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RoutesStoredInTreeTest.routerNotFindStaticPathTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="app.app.test" />
       <extension name="coverage">
         <pattern>
@@ -153,59 +194,27 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.AppTest" />
-      <option name="METHOD_NAME" value="routerNotFindDynamicPathTest3" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AppTest.routerNotFindDynamicPathTest4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="app.app.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.AppTest" />
-      <option name="METHOD_NAME" value="routerNotFindDynamicPathTest4" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AppTest.routerNotFindDynamicPathTest5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="app.app.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.AppTest" />
-      <option name="METHOD_NAME" value="routerNotFindDynamicPathTest5" />
+      <option name="MAIN_CLASS_NAME" value="org.example.RoutesStoredInTreeTest" />
+      <option name="METHOD_NAME" value="routerNotFindStaticPathTest2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.AppTest" />
-      <item itemvalue="JUnit.AppTest.routerNotFindDynamicPathTest2" />
-      <item itemvalue="JUnit.AppTest.routerNotFindDynamicPathTest3" />
-      <item itemvalue="JUnit.AppTest.routerNotFindDynamicPathTest4" />
-      <item itemvalue="JUnit.AppTest.routerNotFindDynamicPathTest5" />
+      <item itemvalue="JUnit.RoutesStoredInListTest" />
+      <item itemvalue="JUnit.RoutesStoredInTreeTest" />
+      <item itemvalue="JUnit.RoutesStoredInTreeTest.routerNotFindDynamicPathTest1" />
+      <item itemvalue="JUnit.RoutesStoredInTreeTest.routerNotFindDynamicPathTest2" />
+      <item itemvalue="JUnit.RoutesStoredInTreeTest.routerNotFindStaticPathTest2" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AppTest" />
-        <item itemvalue="JUnit.AppTest.routerNotFindDynamicPathTest5" />
-        <item itemvalue="JUnit.AppTest.routerNotFindDynamicPathTest4" />
-        <item itemvalue="JUnit.AppTest.routerNotFindDynamicPathTest3" />
-        <item itemvalue="JUnit.AppTest.routerNotFindDynamicPathTest2" />
+        <item itemvalue="JUnit.RoutesStoredInTreeTest" />
+        <item itemvalue="JUnit.RoutesStoredInListTest" />
+        <item itemvalue="JUnit.RoutesStoredInTreeTest.routerNotFindDynamicPathTest2" />
+        <item itemvalue="JUnit.RoutesStoredInTreeTest.routerNotFindDynamicPathTest1" />
+        <item itemvalue="JUnit.RoutesStoredInTreeTest.routerNotFindStaticPathTest2" />
       </list>
     </recent_temporary>
   </component>
@@ -234,7 +243,7 @@
       <workItem from="1755595757793" duration="391000" />
       <workItem from="1755596154238" duration="2141000" />
       <workItem from="1755598332395" duration="73000" />
-      <workItem from="1755598410385" duration="12136000" />
+      <workItem from="1755598410385" duration="16420000" />
     </task>
     <servers />
   </component>

@@ -1,5 +1,9 @@
 package hexlet.code.router;
 
+import hexlet.code.router.routesBasedOnPrefixTree.Edge;
+import hexlet.code.router.routesBasedOnPrefixTree.PrefixTree;
+import hexlet.code.router.routesBasedOnPrefixTree.PrefixTreeNode;
+
 import java.util.List;
 import java.util.Map;
 
@@ -44,6 +48,25 @@ public class Router {
         } catch (Exception e) {
             throw e;
         }
+    }
+
+    // перегрузка с путями, хранящимися в префиксном дереве
+    public static Map<String, String> serve(PrefixTree routes, String path) throws Exception {
+        String[] pathParts = path.split("/");
+        PrefixTreeNode current = routes.getRoot();
+        int i = 1;
+        while (!current.isLeaf() && i < pathParts.length) {
+            Edge targetEdge = current.edgesMatchesSegment(pathParts[i]);
+            if (targetEdge == null) {
+                throw new Exception("Path not found");
+            }
+            i++;
+            current = targetEdge.getTo();
+        }
+        if (current.isTerminal() && i == pathParts.length) {
+            return current.getHandler();
+        }
+        throw new Exception("Path not found");
     }
 
 

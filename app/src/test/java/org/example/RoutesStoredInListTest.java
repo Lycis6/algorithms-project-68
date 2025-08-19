@@ -7,7 +7,7 @@ import java.util.Map;
 import static org.junit.Assert.assertEquals;
 
 
-public class AppTest {
+public class RoutesStoredInListTest {
     private final  List<Map<String, Object>> routes = List.of(
             Map.of("path", "/courses/:id",
                     "constraints", Map.of("id", "\\w+"),
