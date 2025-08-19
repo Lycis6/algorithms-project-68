@@ -30,7 +30,7 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = "hexlet.code.router.Router"
+    mainClass = "hexlet.code.router.App"
 }
 
 group = "hexlet.code"
