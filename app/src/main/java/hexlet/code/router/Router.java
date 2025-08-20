@@ -4,6 +4,7 @@ import hexlet.code.router.routesBasedOnPrefixTree.Edge;
 import hexlet.code.router.routesBasedOnPrefixTree.PrefixTree;
 import hexlet.code.router.routesBasedOnPrefixTree.PrefixTreeNode;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -64,8 +65,10 @@ public class Router {
                     result.put("params", params);
                     return result;
                 } else {
-                    String[] pathParts = request.get("path").split("/");
-                    String[] routeParts = route.get("path").toString().split("/");
+                    String[] pathParts  = Arrays.stream(request.get("path").split("/"))
+                            .filter(s -> !s.isEmpty()).toArray(String[]::new);
+                    String[] routeParts = Arrays.stream(route.get("path").toString().split("/"))
+                            .filter(s -> !s.isEmpty()).toArray(String[]::new);
                     if (routeParts.length != pathParts.length) {
                         continue;
                     }
@@ -75,12 +78,10 @@ public class Router {
                             if (routeParts[i].startsWith(":")) {
                                 String placeholder = routeParts[i].substring(1);
                                 Map<String, String> constraints = (Map<String, String>) route.get("constraints");
-                                if (!(constraints.get(placeholder) == null)
-                                        && !constraints.get(placeholder).equals(".")) {
-                                    if (!pathParts[i].matches(constraints.get(placeholder))) {
-                                        equal = false;
-                                        break;
-                                    }
+                                String rule = (constraints != null) ? constraints.get(placeholder) : null;
+                                if (rule != null && !rule.equals(".") && !pathParts[i].matches(rule)) {
+                                    equal = false;
+                                    break;
                                 }
                                 params.put(placeholder, pathParts[i]);
                             } else {
