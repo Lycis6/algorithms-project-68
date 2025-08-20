@@ -75,9 +75,12 @@ public class Router {
                             if (routeParts[i].startsWith(":")) {
                                 String placeholder = routeParts[i].substring(1);
                                 Map<String, String> constraints = (Map<String, String>) route.get("constraints");
-                                if (!pathParts[i].matches(constraints.get(placeholder))) {
-                                    equal = false;
-                                    break;
+                                if (!(constraints.get(placeholder) == null)
+                                        && !constraints.get(placeholder).equals(".")) {
+                                    if (!pathParts[i].matches(constraints.get(placeholder))) {
+                                        equal = false;
+                                        break;
+                                    }
                                 }
                                 params.put(placeholder, pathParts[i]);
                             } else {
