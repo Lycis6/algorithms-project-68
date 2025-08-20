@@ -8,20 +8,33 @@ import hexlet.code.router.routesBasedOnPrefixTree.PrefixTreeNode;
 import java.util.List;
 import java.util.Map;
 
+/*
+Поддерживаемые пути:
+/courses/:id — Чтение, удаление, обновление
+/courses — Создание, чтение нескольких курсов
+ */
+
 public class App {
     public static void main(String[] args) {
         List<Map<String, Object>> routes = List.of(
-                Map.of("path", "/courses/:id", // сам url
-                        "handler", Map.of("body", "course!"), // обработчик с телом
+                Map.of("path", "/courses/:id", // url
+                        "method", "GET", // метод запроса
+                        "handler", Map.of("body", "courses get"), // обработчик
                         "constraints", Map.of("id", "\\w+")), // плейсхолдер и соответствующая ему регулярка
-                Map.of("path", "/courses/:course_id/exercises/:id",
-                        "handler", Map.of("body", "exercise!"),
-                        "constraints", Map.of("course_id", "\\w+",
-                                                  "id", "\\w+")),
+                Map.of("path", "/courses/:id",
+                        "method", "PUT",
+                        "handler", Map.of("body", "courses update"),
+                        "constraints", Map.of("id", "\\w+")),
+                Map.of("path", "/courses/:id",
+                        "method", "DELETE",
+                        "handler", Map.of("body", "courses delete"),
+                        "constraints", Map.of("id", "\\w+")),
                 Map.of("path", "/courses",
-                        "handler", Map.of("body", "courses")),
-                Map.of("path", "/courses/basics",
-                        "handler", Map.of("body", "basics"))
+                        "method", "POST",
+                        "handler", Map.of("body", "courses! create")),
+                Map.of("path", "/courses",
+                        "method", "GET",
+                        "handler", Map.of("body", "courses! get"))
         );
 
         PrefixTree routesByTree = new PrefixTree();
@@ -30,5 +43,6 @@ public class App {
         routesByTree.getRoot().addEdge(new Edge(routesByTree.getRoot(), node1, "course",
                 EdgeType.STATIC, null));
         node1.addEdge(new Edge(node1, node2, "basics", EdgeType.STATIC, null));
+
     }
 }
