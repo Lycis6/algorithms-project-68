@@ -57,8 +57,7 @@ public class Router {
             Map<String, Object> result = new HashMap<>();
             for (Map<String, Object> route : routes) {
                 Map<String, String> params = new HashMap<>();
-                if (route.get("path").equals(request.get("path"))
-                        && route.get("method").equals(request.get("method"))) {
+                if (route.get("path").equals(request.get("path")) && methodMatch(route, request)) {
                     result.put("handler",  route.get("handler"));
                     result.put("method", request.get("method"));
                     result.put("path", request.get("path"));
@@ -87,7 +86,7 @@ public class Router {
                             }
                         }
                     }
-                    if (equal && route.get("method").equals(request.get("method"))) {
+                    if (equal && methodMatch(route, request)) {
                         result.put("handler",  route.get("handler"));
                         result.put("method", request.get("method"));
                         result.put("path", request.get("path"));
@@ -100,6 +99,11 @@ public class Router {
         } catch (Exception e) {
             throw e;
         }
+    }
+
+    public static boolean methodMatch(Map<String, Object> route, Map<String, String> request) {
+        request.putIfAbsent("method", "GET");
+        return (route.get("method") == null) || route.get("method").equals(request.get("method"));
     }
 
     // перегрузка с путями, хранящимися в префиксном дереве
