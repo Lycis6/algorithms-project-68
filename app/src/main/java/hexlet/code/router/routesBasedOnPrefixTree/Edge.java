@@ -1,6 +1,6 @@
 package hexlet.code.router.routesBasedOnPrefixTree;
 
-public class Edge {
+public final class Edge {
     private PrefixTreeNode from;
     private PrefixTreeNode to;
     private String segment;
@@ -38,11 +38,6 @@ public class Edge {
     public String getConstraint() {
         return constraint;
     }
-
-    public String setConstraint(String constraint) {
-        return this.constraint = constraint;
-    }
-
     public boolean matches(String input) {
         if (type.equals(EdgeType.STATIC)) {
             return input.equals(segment);

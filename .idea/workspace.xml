@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="fa49570b-2398-4c27-8bdf-664c73aab593" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/out/production/classes/hexlet/code/router/Router.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/production/classes/hexlet/code/router/Router.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/router/routesBasedOnPrefixTree/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/router/routesBasedOnPrefixTree/Edge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/router/routesBasedOnPrefixTree/PrefixTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/router/routesBasedOnPrefixTree/PrefixTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/router/routesBasedOnPrefixTree/PrefixTreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/router/routesBasedOnPrefixTree/PrefixTreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/org/example/RoutesStoredInListMethodsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/org/example/RoutesStoredInListMethodsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +133,7 @@
       <recent name="$PROJECT_DIR$/app/src/main/java/hexlet/code/router" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="JUnit.RoutesStoredInTreeTest">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hexlet.code.router.App" />
       <module name="app.app.main" />
@@ -214,9 +217,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.RoutesStoredInTreeTest" />
         <item itemvalue="JUnit.RoutesStoredInListTest" />
+        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.RoutesStoredInListMethodsTest" />
         <item itemvalue="JUnit.RoutesStoredInListMethodsTest.routerNotFindDynamicPathTest1" />
       </list>
@@ -248,7 +251,7 @@
       <workItem from="1755596154238" duration="2141000" />
       <workItem from="1755598332395" duration="73000" />
       <workItem from="1755598410385" duration="16660000" />
-      <workItem from="1755689917550" duration="7238000" />
+      <workItem from="1755689917550" duration="8499000" />
     </task>
     <servers />
   </component>

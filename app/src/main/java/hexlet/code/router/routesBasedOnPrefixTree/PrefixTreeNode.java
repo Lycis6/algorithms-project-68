@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class PrefixTreeNode {
+public final class PrefixTreeNode {
     private final boolean isTerminal;
     private final boolean isLeaf;
     private List<Edge> edges;

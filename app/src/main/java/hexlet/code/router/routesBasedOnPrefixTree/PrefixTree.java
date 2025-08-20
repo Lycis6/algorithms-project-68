@@ -2,7 +2,7 @@ package hexlet.code.router.routesBasedOnPrefixTree;
 
 import java.util.ArrayList;
 
-public class PrefixTree {
+public final class PrefixTree {
     private final PrefixTreeNode root;
     public PrefixTree(PrefixTreeNode root) {
         this.root = root;
