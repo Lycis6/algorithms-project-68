@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa49570b-2398-4c27-8bdf-664c73aab593" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/out/production/classes/hexlet/code/router/Router.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/production/classes/hexlet/code/router/Router.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/router/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/router/Router.java" afterDir="false" />
-    </list>
+    <list default="true" id="fa49570b-2398-4c27-8bdf-664c73aab593" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -249,7 +245,7 @@
       <workItem from="1755596154238" duration="2141000" />
       <workItem from="1755598332395" duration="73000" />
       <workItem from="1755598410385" duration="16660000" />
-      <workItem from="1755689917550" duration="4378000" />
+      <workItem from="1755689917550" duration="4727000" />
     </task>
     <servers />
   </component>

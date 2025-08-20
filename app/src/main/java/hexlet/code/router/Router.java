@@ -25,7 +25,7 @@ public class Router {
                         continue;
                     }
                     boolean equal = true;
-                    for (int i = 0; i < routeParts.length - 1; i++) {
+                    for (int i = 0; i < routeParts.length; i++) {
                         if (!pathParts[i].equals(routeParts[i])) {
                             if (routeParts[i].startsWith(":")) {
                                 String placeholder = routeParts[i].substring(1);
@@ -71,7 +71,7 @@ public class Router {
                         continue;
                     }
                     boolean equal = true;
-                    for (int i = 0; i < routeParts.length - 1; i++) {
+                    for (int i = 0; i < routeParts.length; i++) {
                         if (!pathParts[i].equals(routeParts[i])) {
                             if (routeParts[i].startsWith(":")) {
                                 String placeholder = routeParts[i].substring(1);
