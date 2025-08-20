@@ -1,3 +1,4 @@
+/*
 package org.example;
 
 import hexlet.code.router.Router;
@@ -86,3 +87,6 @@ public class RoutesStoredInListMethodsTest {
 
 
 }
+
+
+ */

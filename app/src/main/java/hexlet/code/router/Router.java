@@ -4,6 +4,7 @@ import hexlet.code.router.routesBasedOnPrefixTree.Edge;
 import hexlet.code.router.routesBasedOnPrefixTree.PrefixTree;
 import hexlet.code.router.routesBasedOnPrefixTree.PrefixTreeNode;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -50,13 +51,19 @@ public class Router {
         }
     }
 
-    public static Map<String, String> serve(List<Map<String, Object>> routes, Map<String, String> request)
+    public static Map<String, Object> serve(List<Map<String, Object>> routes, Map<String, String> request)
             throws Exception {
         try {
+            Map<String, Object> result = new HashMap<>();
             for (Map<String, Object> route : routes) {
+                Map<String, String> params = new HashMap<>();
                 if (route.get("path").equals(request.get("path"))
                         && route.get("method").equals(request.get("method"))) {
-                    return (Map<String, String>) route.get("handler");
+                    result.put("handler",  route.get("handler"));
+                    result.put("method", request.get("method"));
+                    result.put("path", request.get("path"));
+                    result.put("params", params);
+                    return result;
                 } else {
                     String[] pathParts = request.get("path").split("/");
                     String[] routeParts = route.get("path").toString().split("/");
@@ -73,6 +80,7 @@ public class Router {
                                     equal = false;
                                     break;
                                 }
+                                params.put(placeholder, pathParts[i]);
                             } else {
                                 equal = false;
                                 break;
@@ -80,7 +88,11 @@ public class Router {
                         }
                     }
                     if (equal && route.get("method").equals(request.get("method"))) {
-                        return (Map<String, String>) route.get("handler");
+                        result.put("handler",  route.get("handler"));
+                        result.put("method", request.get("method"));
+                        result.put("path", request.get("path"));
+                        result.put("params", params);
+                        return result;
                     }
                 }
             }
